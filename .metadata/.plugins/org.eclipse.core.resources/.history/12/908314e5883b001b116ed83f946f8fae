@@ -1,0 +1,10 @@
+package com.gcha.datastructure.stack;
+
+public class StackTest {
+	
+	@Test
+	@DisplayName("Stack push")
+	void push() {
+		
+	}
+}

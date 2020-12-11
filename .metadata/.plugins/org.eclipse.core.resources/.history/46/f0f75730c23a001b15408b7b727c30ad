@@ -1,0 +1,5 @@
+package com.gcha.test.junit5;
+
+public @interface SlowTest {
+
+}

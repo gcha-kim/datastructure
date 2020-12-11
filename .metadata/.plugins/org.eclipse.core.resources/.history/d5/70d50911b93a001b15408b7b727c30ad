@@ -1,0 +1,10 @@
+package com.gcha.test.junit5;
+
+public class JunitStudy {
+
+	private StudyStatus status;
+	
+	public StudyStatus getStatus(){
+		return this.status;
+	}
+}

@@ -1,0 +1,29 @@
+package com.gcha.datastructure.stack;
+
+public class Stack {
+
+	//후입선출
+	
+	private int[] stackArr;
+	private int topIndex;
+	
+	Stack(){
+		stackArr = new int[10];
+		topIndex = -1;
+	}
+	
+	//data 추가
+	void push() {
+		topIndex += 1;
+		if(topIndex < 0) {
+			stackArr = new int[0];
+		}
+		
+	}
+	
+	//data 제거
+	void pop() {
+		topIndex -= 1;
+		
+	}
+}

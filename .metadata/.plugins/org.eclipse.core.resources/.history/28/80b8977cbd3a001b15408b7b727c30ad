@@ -1,0 +1,20 @@
+package com.gcha.test.junit5;
+
+public class JunitStudy {
+
+	private int limit;
+	
+	JunitStudy(int limit){
+		if(limit < 0) {
+			throw new IllegalArgumentException("limit은 0보다 커야한");
+		}
+		this.limit = limit;
+	}
+	private StudyStatus status;
+	
+	public StudyStatus getStatus(){
+		return this.status;
+	}
+
+	
+}

@@ -1,0 +1,5 @@
+package com.gcha.datastructure.stack;
+
+public class ListNodeStack {
+
+}

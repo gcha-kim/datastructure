@@ -1,0 +1,8 @@
+package com.gcha.datastructure.queue;
+
+public class Queue {
+//	배열을 사용해서 한번
+//	ListNode를 사용해서 한번.
+	
+	
+}

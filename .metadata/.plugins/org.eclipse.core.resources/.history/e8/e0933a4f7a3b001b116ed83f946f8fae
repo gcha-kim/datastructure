@@ -1,0 +1,59 @@
+package com.gcha.datastructure.linkedlist;
+
+public class LinkedList {
+
+//	LinkedList에 대해 공부하세요.
+//	정수를 저장하는 ListNode 클래스를 구현하세요.
+//	ListNode add(ListNode head, ListNode nodeToAdd, int position)를 구현하세요.
+//	ListNode remove(ListNode head, int positionToRemove)를 구현하세요.
+//	boolean contains(ListNode head, ListNode nodeTocheck)를 구현하세요.
+
+	private ListNode head;
+	
+	//haed노드 , add할 노드값 , 위
+	ListNode add(ListNode head, ListNode nodeToAdd, int position) {
+		if(head == null ) head = this.head;
+		
+		ListNode positionNode = getNode(head,position);
+		
+		//신규노드에 해당위치의 노드의 다음값으로 링
+		nodeToAdd.setNextNode(positionNode);
+		//이전노드의 다음값에 새로추가 될 노드 링크
+		positionNode.setNextNode(nodeToAdd);
+		return nodeToAdd;
+	}
+	ListNode remove(ListNode head, int position) {
+		if(head == null ) head = this.head;
+		
+		ListNode positionNode = getNode(head,position);
+		ListNode beforePositionNode = getNode(head,position-1);
+		
+		//이전 노드에 해당위치의 노드의 다음값으로 링
+		beforePositionNode.setNextNode(positionNode.getNextNode());
+		//해당 위치 노드 초기
+		
+		positionNode = null;
+		
+		return beforePositionNode;
+	}
+	
+	public ListNode getNode(ListNode head, int position) {
+		
+		if(position < 0) return null;
+		
+		ListNode tempNode = head;
+		for(int i=0; i < position; i++) {
+			
+			tempNode = tempNode.getNextNode();
+		}
+		System.out.println(tempNode.getData());
+		return tempNode;
+	}
+	
+//	  Node node(int index) {
+//	        Node x = head;
+//	        for (int i = 0; i < index; i++)
+//	            x = x.next;
+//	        return x;
+//	    }
+}

@@ -1,0 +1,9 @@
+package com.gcha.test.junit5;
+
+public class test {
+
+		@Test
+		void create() {
+			
+		}
+}

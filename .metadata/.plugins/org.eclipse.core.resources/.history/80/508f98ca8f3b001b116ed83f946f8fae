@@ -1,0 +1,42 @@
+package com.gcha.datastructure.queue;
+
+import java.util.Arrays;
+
+public class Queue {
+//	배열을 사용해서 한번
+//	ListNode를 사용해서 한번.
+	
+	private int[] queueArr;
+	
+	
+	public int[] getQueueArr() {
+		return queueArr;
+	}
+
+	
+	
+	Queue(int size){
+		this.stackArr = new int[size];
+		this.topIndex = -1;
+	}
+	
+	//data 추가
+	public void push(int data) {
+		this.topIndex += 1;
+		
+		stackArr[this.topIndex] = data;
+		
+	}
+	
+	//data 제거
+	public int pop() {
+		int removeData = stackArr[this.topIndex];
+		this.topIndex--;
+		
+		return removeData;
+	}
+	
+	public String toString() {
+		return Arrays.toString(this.stackArr);
+	}
+}

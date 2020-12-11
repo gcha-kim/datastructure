@@ -1,0 +1,23 @@
+package com.gcha.datastructure.linkedlist;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+public class LinkedListTest {
+	
+	@Test
+	@DisplayName("node 가져오기")
+	void getNode() {
+		ListNode nextNode3 = new ListNode(3);
+		ListNode nextNode2 = new ListNode(2,nextNode3);
+		ListNode nextNode = new ListNode(1,nextNode2);
+		ListNode head = new ListNode(0,nextNode);
+		
+		System.out.println("--------------------");
+		LinkedList linkedList = new LinkedList();
+		ListNode temp = linkedList.getNode(head, 2);
+		assertEquals(2, temp.getData());	
+	}
+}

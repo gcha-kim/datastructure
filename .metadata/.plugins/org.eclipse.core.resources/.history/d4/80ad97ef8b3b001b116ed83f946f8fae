@@ -1,0 +1,36 @@
+package com.gcha.datastructure.stack;
+
+import com.gcha.datastructure.linkedlist.ListNode;
+
+public class ListNodeStack {
+
+	//ListNode head를 가지고 있는 ListNodeStack 클래스를 구현하세요.
+	//void push(int data)를 구현하세요.
+	//int pop()을 구현하세요.
+	
+	private ListNode head;
+	
+	public void push(int data) {
+	
+		if(head == null) {
+			head = new ListNode(data);
+		}else {
+			ListNode newNode = new ListNode(data);
+		}
+		
+		
+		
+	}
+	
+	public ListNode top(ListNode head) {
+		
+		while(true) {
+			
+			if(head.getNextNode() == null) {
+				return head;
+			}else {
+				head = head.getNextNode();
+			}
+		}
+	}
+}

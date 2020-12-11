@@ -1,0 +1,52 @@
+package com.gcha.datastructure.linkedlist;
+
+import org.springframework.stereotype.Service;
+
+public class LinkedList {
+
+//	LinkedList에 대해 공부하세요.
+//	정수를 저장하는 ListNode 클래스를 구현하세요.
+//	ListNode add(ListNode head, ListNode nodeToAdd, int position)를 구현하세요.
+//	ListNode remove(ListNode head, int positionToRemove)를 구현하세요.
+//	boolean contains(ListNode head, ListNode nodeTocheck)를 구현하세요.
+	
+	@SuppressWarnings("unused")
+	private ListNode head;
+//	private ListNode tail;
+	
+	//haed노드 , add할 노드값 , 위
+	ListNode add(ListNode head, ListNode nodeToAdd, int position) {
+		
+		ListNode positionNode = getNode(head,position);
+		
+		//신규노드에 해당위치의 노드의 다음값으로 링
+		nodeToAdd.setNextNode(positionNode.getNextNode());
+		//이전노드의 다음값에 새로추가 될 노드 링크
+		positionNode.setNextNode(nodeToAdd);
+		return new ListNode();
+	}
+	
+	public ListNode getNode(ListNode head, int position) {
+		System.out.println(head);
+		System.out.println(position);
+		if(position < 0) return null;
+		
+		ListNode tempNode = head;
+		for(int i=0; i < position -1 ; i++) {
+			System.out.println(tempNode.getData());
+			tempNode = tempNode.getNextNode();
+			
+			if(i == position-1) {
+				return tempNode;
+			}
+		}
+		return null;
+	}
+	
+//	  Node node(int index) {
+//	        Node x = head;
+//	        for (int i = 0; i < index; i++)
+//	            x = x.next;
+//	        return x;
+//	    }
+}

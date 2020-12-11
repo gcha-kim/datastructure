@@ -1,0 +1,23 @@
+package com.gcha.datastructure.linkedlist;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class LinkedListTest {
+	
+	
+	@Autowired
+	LinkedList linkedList;
+	
+	@Test
+	void getNode() {
+		ListNode head = new ListNode();
+		head.setData(1);
+		
+		ListNode nextNode = new ListNode();
+		nextNode.setData(2);
+		
+		head.setNextNode(nextNode);
+		linkedList.getNode(head, position)
+	}
+}

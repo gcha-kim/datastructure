@@ -1,0 +1,44 @@
+package com.gcha.datastructure.linkedlist;
+
+public class LinkedList {
+
+//	LinkedList에 대해 공부하세요.
+//	정수를 저장하는 ListNode 클래스를 구현하세요.
+//	ListNode add(ListNode head, ListNode nodeToAdd, int position)를 구현하세요.
+//	ListNode remove(ListNode head, int positionToRemove)를 구현하세요.
+//	boolean contains(ListNode head, ListNode nodeTocheck)를 구현하세요.
+	
+	@SuppressWarnings("unused")
+	private ListNode head;
+//	private ListNode tail;
+	
+	//haed노드 , add할 노드값 , 위
+	ListNode add(ListNode head, ListNode nodeToAdd, int position) {
+		
+		head.getNext();
+		for(int i=0; i < position -1 ; i++) { //해당 position 노드 찾
+			
+		}
+		
+		return new ListNode();
+	}
+	
+	ListNode getNode(ListNode head, int position) {
+		if(position < 0) return null;
+		
+		ListNode tempNode = head;
+		for(int i=0; i < position -1 ; i++) {
+			tempNode = tempNode.getNextNode();
+			if(i == position-1) {
+				return 
+			}
+		}
+	}
+	
+//	  Node node(int index) {
+//	        Node x = head;
+//	        for (int i = 0; i < index; i++)
+//	            x = x.next;
+//	        return x;
+//	    }
+}

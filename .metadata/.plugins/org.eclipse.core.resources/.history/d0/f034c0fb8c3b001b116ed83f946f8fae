@@ -1,0 +1,23 @@
+package com.gcha.datastructure.stack;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+public class ListNodeStackTest {
+	
+
+	@Test
+	@DisplayName("Stack push")
+	void pushpop() {
+		ListNodeStack stack = new ListNodeStack();
+		
+		stack.push(1);
+		stack.push(2);
+		int resultData = stack.pop();
+		assertEquals(1, resultData);
+		
+	}
+	
+}

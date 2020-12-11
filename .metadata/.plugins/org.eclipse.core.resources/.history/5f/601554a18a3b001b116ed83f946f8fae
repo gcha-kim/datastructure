@@ -1,0 +1,45 @@
+package com.gcha.datastructure.stack;
+
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+public class StackTest {
+	
+
+	@Test
+	@DisplayName("Stack push")
+	void push() {
+		int[] resultArr = {1,2};
+		Stack stack = new Stack(2);
+		stack.push(1);
+		stack.push(2);;
+		System.out.println(stack.toString());
+		assertArrayEquals(stack.getStackArr(), resultArr);
+		
+	}
+	
+	@Test
+	@DisplayName("Stack pop")
+	void pop() {
+		int[] resultArr = {1,2};
+		
+		Stack stack = new Stack(3);
+		stack.push(1);
+		stack.push(2);
+		stack.push(3);
+		stack.pop();
+		stack.push(4);
+		System.out.println(stack.toString());
+		assertArrayEquals(stack.getStackArr(), resultArr);
+		
+	}
+	
+	@BeforeEach
+	void init() {
+		
+	}
+}

@@ -1,0 +1,11 @@
+package com.gcha.test.junit5;
+
+import org.junit.jupiter.api.Test;
+
+public class test {
+
+		@Test
+		void create() {
+			
+		}
+}

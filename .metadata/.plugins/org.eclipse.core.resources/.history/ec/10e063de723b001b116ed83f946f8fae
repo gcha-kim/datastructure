@@ -1,0 +1,27 @@
+package com.gcha.datastructure.linkedlist;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class main {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+		ListNode nextNode3 = new ListNode(3);
+		ListNode nextNode2 = new ListNode(2,nextNode3);
+		ListNode nextNode = new ListNode(1,nextNode2);
+		ListNode head = new ListNode(0,nextNode);
+		
+		
+		nextNode.setNextNode(nextNode);
+		head.setNextNode(nextNode);
+		System.out.println("--------------------");
+		LinkedList linkedList = new LinkedList();
+		ListNode temp = linkedList.getNode(head, 2);
+	//	System.out.println(temp.getData());
+	}
+
+}

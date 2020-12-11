@@ -1,0 +1,70 @@
+package com.gcha.test.junit5;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.DisplayNameGeneration;
+import org.junit.jupiter.api.DisplayNameGenerator;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.RepetitionInfo;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+
+@DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
+public class JunitStudyTest {
+
+	@Test
+	@FastTest    // == @Tag("fast")
+	@DisplayName("스터디 만들기  \uD83D\uDE31")
+	void create_new_study() {
+		JunitStudy study = new JunitStudy(-10);
+		assertTrue(true);
+		//assertThrows(IllegalArgumentException.class, () -> new JunitStudy(-10));
+		assertNotNull(study);
+		//study.getStatus() == null 인 상태
+		assertEquals(StudyStatus.DRAFT, study.getStatus(), "Study 생성 시 처음 값은 DRAFT여야 한다");
+		System.out.println("create");
+	}
+	
+	
+	@DisplayName("스터디만들기")
+	@RepeatedTest(value=10, name ="{displayName},{currentRepetition}/{totalRepetitions}")
+	void repeatTest(RepetitionInfo repetitionInfo) {
+		System.out.println("test 횟수/총횟수 : "+repetitionInfo.getCurrentRepetition()
+						+ "/" + repetitionInfo.getTotalRepetitions());
+	}
+	
+	
+	@Test
+	//@Disabled
+	@Tag("slow")
+	void create_new_study1() {
+		System.out.println("create1 ");
+	}
+	
+//	@BeforeAll
+//	static void beforeAll() {
+//		System.out.println("before all : 모든 테스트 전 가장 먼저 실행");
+//	}
+//	
+//	@AfterAll
+//	static void afterAll() {
+//		System.out.println("after all : 모든 테스트 후 가장 마지막에 실행");
+//	}
+//	
+//	@BeforeEach
+//	void beforeEach() {
+//		System.out.println("before each : 각 테스트 수행 전 마다 실행");
+//	}
+//	
+//	@AfterEach
+//	void afterEach() {
+//		System.out.println("after each : 각 테스트 수행 후 마다 실행");
+//	}
+}

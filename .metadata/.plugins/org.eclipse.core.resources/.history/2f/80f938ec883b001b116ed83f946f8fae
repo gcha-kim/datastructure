@@ -1,0 +1,18 @@
+package com.gcha.datastructure.stack;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+public class StackTest {
+	
+	@Test
+	@DisplayName("Stack push")
+	void push() {
+		Stack stack = new Stack();
+		stack.push(1);
+		stack.push(2);;
+		
+		stack.toString()
+		
+	}
+}

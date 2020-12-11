@@ -1,0 +1,23 @@
+package com.gcha.datastructure.linkedlist;
+
+@Service
+public class ListNode {
+	
+	private int data;
+	private ListNode nextNode;
+	
+	public int getData() {
+		return data;
+	}
+	public void setData(int data) {
+		this.data = data;
+	}
+	
+	public ListNode getNextNode() {
+		return nextNode;
+	}
+	public void setNextNode(ListNode nextNode) {
+		this.nextNode = nextNode;
+	}
+	
+}	

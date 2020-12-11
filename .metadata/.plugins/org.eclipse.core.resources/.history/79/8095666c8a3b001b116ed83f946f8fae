@@ -1,0 +1,45 @@
+package com.gcha.datastructure.stack;
+
+import java.util.Arrays;
+
+public class Stack {
+
+	//후입선출
+//	int 배열을 사용해서 정수를 저장하는 Stack을 구현하세요.
+//	void push(int data)를 구현하세요.
+//	int pop()을 구현하세요.
+	
+	private int[] stackArr;
+	private int topIndex;
+	
+	public int[] getStackArr() {
+		return stackArr;
+	}
+
+	
+	
+	Stack(int size){
+		this.stackArr = new int[size];
+		this.topIndex = -1;
+	}
+	
+	//data 추가
+	public void push(int data) {
+		this.topIndex += 1;
+		
+		stackArr[this.topIndex] = data;
+		
+	}
+	
+	//data 제거
+	public int pop() {
+		int removeData = stackArr[this.topIndex];
+		topIndex -= 1;
+		return removeData;
+	 List<Integer> list = new ArrayList<Integer>()
+	}
+	
+	public String toString() {
+		return Arrays.toString(stackArr);
+	}
+}

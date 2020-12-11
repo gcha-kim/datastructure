@@ -1,0 +1,13 @@
+package com.gcha.test.junit5;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class JunitStudy {
+
+	public static void main(String[] args) {
+		SpringApplication.run(JunitStudy.class, args);
+	}
+
+}

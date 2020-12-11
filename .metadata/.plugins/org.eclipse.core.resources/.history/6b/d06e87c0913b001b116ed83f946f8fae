@@ -1,0 +1,27 @@
+package com.gcha.datastructure.queue;
+
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.Arrays;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+public class QueueTest {
+	
+	
+	@Test
+	@DisplayName("QUEUE add")
+	void add_poll() {
+		Queue queue = new Queue(3);
+		queue.add(1);
+		queue.add(2);
+		queue.add(3);
+		
+		queue.poll();
+		int[] resultArr = {2,3};
+		assertEquals(queue.getQueueArr()[0], 2);
+	
+	}
+}
